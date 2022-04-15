@@ -1,0 +1,28 @@
+{
+  "name": "202204-w2chwe-mariam-lliso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-dev": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iammariamdev/202204-W2CHWE-mariam-lliso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iammariamdev/202204-W2CHWE-mariam-lliso/issues"
+  },
+  "homepage": "https://github.com/iammariamdev/202204-W2CHWE-mariam-lliso#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1"
+  }
+}
