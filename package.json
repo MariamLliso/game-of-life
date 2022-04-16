@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "test-dev": "jest --watchAll",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "sass": "sass sass:css",
+    "sass-dev": "sass sass:css --watch"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.0",
     "jest": "^27.5.1",
-    "husky": "^7.0.0"
+    "sass": "^1.50.0"
   }
 }
