@@ -1,5 +1,6 @@
 // Layout
 @use "layout/grid";
+@use "layout/containers";
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 
@@ -13,8 +14,8 @@ body {
   margin: 0;
   background: linear-gradient(
     140deg,
-    rgba(145, 232, 232, 1) 0%,
-    rgba(189, 250, 255, 1) 75%
+    rgba(189, 250, 255, 0.7) 0%,
+    rgba(145, 232, 232, 0.7) 75%
   );
   overflow: hidden;
   background-repeat: no-repeat;

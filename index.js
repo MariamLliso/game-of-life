@@ -3,11 +3,26 @@ class Cell {
   isAlive;
   row;
   column;
+  neighbors = [];
 
   constructor(isAlive, row, column) {
     this.isAlive = isAlive;
     this.row = row;
     this.column = column;
+  }
+
+  getNeighbors(arrCells) {
+    this.neighbors = arrCells.filter(
+      (cell) =>
+        (cell.column === this.column - 1 && cell.row === this.row - 1) ||
+        (cell.column === this.column && cell.row === this.row - 1) ||
+        (cell.column === this.column + 1 && cell.row === this.row - 1) ||
+        (cell.column === this.column + 1 && cell.row === this.row) ||
+        (cell.column === this.column + 1 && cell.row === this.row + 1) ||
+        (cell.column === this.column && cell.row === this.row + 1) ||
+        (cell.column === this.column - 1 && cell.row === this.row + 1) ||
+        (cell.column === this.column - 1 && cell.row === this.row)
+    );
   }
 }
 
@@ -24,14 +39,13 @@ const generateBoard = () => {
       arrCells.push(newCell);
     }
   }
+
+  arrCells.forEach((cell, index, thisArray) => {
+    cell.getNeighbors(thisArray);
+  });
 };
 
-window.onload = () => {
-  const boardGrid = document.querySelector("[data-board-grid]");
-  const positions = document.querySelectorAll("[data-position]");
-
-  generateBoard(boardGrid);
-
+const OnClickCell = (positions) => {
   positions.forEach((position) => {
     const row = parseInt(position.getAttribute("data-row"), 10);
     const column = parseInt(position.getAttribute("data-column"), 10);
@@ -51,4 +65,12 @@ window.onload = () => {
       }
     });
   });
+};
+
+window.onload = () => {
+  const boardGrid = document.querySelector("[data-board-grid]");
+  generateBoard(boardGrid);
+
+  const positions = document.querySelectorAll("[data-position]");
+  OnClickCell(positions);
 };
