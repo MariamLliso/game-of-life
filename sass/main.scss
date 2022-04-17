@@ -2,6 +2,8 @@
 @use "layout/grid";
 @use "layout/containers";
 
+@use "components/buttons";
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 
 * {
@@ -13,9 +15,9 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(
-    140deg,
-    rgba(189, 250, 255, 0.7) 0%,
-    rgba(145, 232, 232, 0.7) 75%
+    180deg,
+    rgba(255, 252, 220, 0.7) 0%,
+    rgba(217, 167, 199, 0.4) 130%
   );
   overflow: hidden;
   background-repeat: no-repeat;
