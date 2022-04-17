@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as v;
+
+.button__container {
+  display: flex;
+}
+
+.button {
+  margin: 10px;
+  padding: 5px 20px;
+  font-size: 1.3em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:disabled {
+    transform: none;
+  }
+
+  &__start {
+    background-color: v.$green;
+  }
+
+  &__stop {
+    background-color: v.$red;
+  }
+}
